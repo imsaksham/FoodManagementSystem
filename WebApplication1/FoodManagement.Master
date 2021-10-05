@@ -1,0 +1,80 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="FoodManagement.master.cs" Inherits="WebApplication1.FoodManagement" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+            height: 662px;
+            margin-bottom: 380px;
+        }
+        .auto-style2 {
+            height: 470px;
+        }
+        .auto-style3 {
+            width: 129px;
+            height: 131px;
+        }
+        .auto-style4 {
+            height: 470px;
+            width: 129px;
+        }
+        .auto-style5 {
+            height: 131px;
+        }
+        .auto-style6 {
+            width: 129px;
+            height: 47px;
+        }
+        .auto-style7 {
+            height: 47px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+        </div>
+        <table class="auto-style1" style="border-collapse: collapse">
+            <tr>
+                <td class="auto-style3" style="background-image: url('https://localhost:44337/Images/f_logo.jpg'); background-position: center center; background-attachment: fixed; background-repeat: no-repeat; background-color: #000000;"></td>
+                <td class="auto-style5" style="background-position: center bottom; font-size: xx-large; background-image: url('https://localhost:44337/Images/Food_Pic.jpg');">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Food Management System</td>
+            </tr>
+            <tr>
+                <td class="auto-style6" style="background-color: #FFFF66"></td>
+                <td class="auto-style7" style="background-color: #FFFF66">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:Label ID="Label1" runat="server" ForeColor="#FF99CC" Height="20px" Text="Location"></asp:Label>
+&nbsp;&nbsp;
+                    <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" Height="20px" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" Width="170px">
+                        <asp:ListItem>Select City</asp:ListItem>
+                        <asp:ListItem>Bangalore</asp:ListItem>
+                        <asp:ListItem>Delhi</asp:ListItem>
+                        <asp:ListItem>Chennai</asp:ListItem>
+                        <asp:ListItem>Noida</asp:ListItem>
+                    </asp:DropDownList>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:Label ID="Label2" runat="server" ForeColor="#FF99CC" Text="Search Cuisine"></asp:Label>
+&nbsp;
+                    <asp:TextBox ID="TextBox1" runat="server" Width="170px"></asp:TextBox>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:HyperLink ID="HyperLink1" runat="server" ForeColor="Black" NavigateUrl="~/Login.aspx">SignIn</asp:HyperLink>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:HyperLink ID="HyperLink2" runat="server" ForeColor="Black" NavigateUrl="~/Registration.aspx">SignUp</asp:HyperLink>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style4" style="background-color: #FFFF66">&nbsp;</td>
+                <td class="auto-style2" style="background-position: center center; background-image: url('https://localhost:44337/Images/food1.jpg'); background-repeat: no-repeat; background-attachment: scroll; background-color: #FFFF66;">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
